@@ -97,7 +97,7 @@ print(tabulate([[fuel, round(Pressure_f, 2), Orifice_f,
                '{0:.2E}'.format(error_fuel)],
                 [ox, round(Pressure_ox, 2), Orifice_ox,
                 '{0:.2E}'.format(error_ox)]],
-               headers=['', 'Pressure (psi)', 'Diameter (in)', 'Error (%)']))
+               headers=['Molecule', 'Pressure (psi)', 'Diameter (in)', 'Error (%)']))
 # print('FO Error: ', ((m_dot_fuel_check/m_dot_ox_check) - F_O)/F_O * 100, '%')
 # print('Fuel: ')
 # print('Pressure (psi):', 'Orifice Diameter (in):', 'Error (%)')
@@ -119,4 +119,12 @@ c = [(m_dot(0.052, 'in', x, 'psi', 298, 'CO2'), x) for x in np.linspace(60, 200,
 plt.plot([i[1] for i in c], [i[0] for i in c])
 plt.xlabel('Upstream Pressure (psi)')
 plt.ylabel('m_dot diluent')
+
+#plt.show()
+
+
+
+
+
+
 
